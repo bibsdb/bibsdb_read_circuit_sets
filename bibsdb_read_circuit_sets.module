@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bibsdb Read Circuit Sets feature.
+ */
+
+include_once 'bibsdb_read_circuit_sets.features.inc';
