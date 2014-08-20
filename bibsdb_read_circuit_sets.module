@@ -5,3 +5,15 @@
  */
 
 include_once 'bibsdb_read_circuit_sets.features.inc';
+
+/** 
+ * Implements hook_entity_info_alter(). 
+ * Make sure that the read circuit set is not searchable
+ */ 
+function bibsdb_read_circuit_sets_views_default_views_alter(&$views) {
+
+  if (isset($views['ding_node_search'])) {
+		$views['ding_node_search']->display['default']->display_options['filters']['type']['value']['read_circuit_set'] = 'read_circuit_set';
+  }
+  
+}
