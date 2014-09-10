@@ -57,7 +57,7 @@ function bibsdb_read_circuit_sets_default_page_manager_handlers() {
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'indhold/laesekredse',
+            'paths' => 'node/141',
           ),
           'context' => 'empty',
           'not' => FALSE,
