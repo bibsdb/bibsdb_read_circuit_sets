@@ -65,6 +65,8 @@ function bibsdb_read_circuit_sets_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'bibsdb-read-circuit-set',
   );
   $display = new panels_display();
   $display->layout = '25_50_25';
