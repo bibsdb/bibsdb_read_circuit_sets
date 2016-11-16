@@ -126,5 +126,12 @@ function bibsdb_read_circuit_sets_strongarm() {
   $strongarm->value = 1;
   $export['node_submitted_read_circuit_set'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_read_circuit_set_pattern';
+  $strongarm->value = 'rcs/[node:title]';
+  $export['pathauto_node_read_circuit_set_pattern'] = $strongarm;
+
   return $export;
 }
