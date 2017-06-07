@@ -24,10 +24,16 @@ function bibsdb_read_circuit_sets_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['css_class'] = 'rcs-list';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'responsive_grid';
@@ -42,14 +48,14 @@ function bibsdb_read_circuit_sets_views_default_views() {
   $handler->display->display_options['style_options']['default_classes'] = 1;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Content: Read Circuit Set Author Last Name */
+  /* Felt: Indhold: Read Circuit Set Author Last Name */
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_lastname']['id'] = 'field_bibsdb_rcs_author_lastname';
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_lastname']['table'] = 'field_data_field_bibsdb_rcs_author_lastname';
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_lastname']['field'] = 'field_bibsdb_rcs_author_lastname';
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_lastname']['label'] = '';
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_lastname']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_lastname']['element_label_colon'] = FALSE;
-  /* Field: Content: Read Circuit Set Author First Name */
+  /* Felt: Indhold: Read Circuit Set Author First Name */
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_firsname']['id'] = 'field_bibsdb_rcs_author_firsname';
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_firsname']['table'] = 'field_data_field_bibsdb_rcs_author_firsname';
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_firsname']['field'] = 'field_bibsdb_rcs_author_firsname';
@@ -59,7 +65,7 @@ function bibsdb_read_circuit_sets_views_default_views() {
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_firsname']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_firsname']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bibsdb_rcs_author_firsname']['element_default_classes'] = FALSE;
-  /* Field: Content: Title */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -70,7 +76,7 @@ function bibsdb_read_circuit_sets_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Read Circuit Set Image */
+  /* Felt: Indhold: Read Circuit Set Image */
   $handler->display->display_options['fields']['field_bibsdb_rcs_image']['id'] = 'field_bibsdb_rcs_image';
   $handler->display->display_options['fields']['field_bibsdb_rcs_image']['table'] = 'field_data_field_bibsdb_rcs_image';
   $handler->display->display_options['fields']['field_bibsdb_rcs_image']['field'] = 'field_bibsdb_rcs_image';
@@ -92,7 +98,7 @@ function bibsdb_read_circuit_sets_views_default_views() {
       'fallback_style' => 'bibsdb_rcs',
     ),
   );
-  /* Field: Content: Read Circuit Set Description */
+  /* Felt: Indhold: Read Circuit Set Description */
   $handler->display->display_options['fields']['field_bibsdb_rcs_description']['id'] = 'field_bibsdb_rcs_description';
   $handler->display->display_options['fields']['field_bibsdb_rcs_description']['table'] = 'field_data_field_bibsdb_rcs_description';
   $handler->display->display_options['fields']['field_bibsdb_rcs_description']['field'] = 'field_bibsdb_rcs_description';
@@ -102,21 +108,21 @@ function bibsdb_read_circuit_sets_views_default_views() {
   $handler->display->display_options['fields']['field_bibsdb_rcs_description']['element_type'] = 'p';
   $handler->display->display_options['fields']['field_bibsdb_rcs_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bibsdb_rcs_description']['element_default_classes'] = FALSE;
-  /* Field: Content: Read Circuit Set Page Count */
+  /* Felt: Indhold: Read Circuit Set Page Count */
   $handler->display->display_options['fields']['field_bibsdb_rcs_page_count']['id'] = 'field_bibsdb_rcs_page_count';
   $handler->display->display_options['fields']['field_bibsdb_rcs_page_count']['table'] = 'field_data_field_bibsdb_rcs_page_count';
   $handler->display->display_options['fields']['field_bibsdb_rcs_page_count']['field'] = 'field_bibsdb_rcs_page_count';
   $handler->display->display_options['fields']['field_bibsdb_rcs_page_count']['label'] = '';
   $handler->display->display_options['fields']['field_bibsdb_rcs_page_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_bibsdb_rcs_page_count']['element_label_colon'] = FALSE;
-  /* Field: Content: Read Circuit Set Publisher */
+  /* Felt: Indhold: Read Circuit Set Publisher */
   $handler->display->display_options['fields']['field_bibsdb_rcs_publisher']['id'] = 'field_bibsdb_rcs_publisher';
   $handler->display->display_options['fields']['field_bibsdb_rcs_publisher']['table'] = 'field_data_field_bibsdb_rcs_publisher';
   $handler->display->display_options['fields']['field_bibsdb_rcs_publisher']['field'] = 'field_bibsdb_rcs_publisher';
   $handler->display->display_options['fields']['field_bibsdb_rcs_publisher']['label'] = '';
   $handler->display->display_options['fields']['field_bibsdb_rcs_publisher']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_bibsdb_rcs_publisher']['element_label_colon'] = FALSE;
-  /* Field: Content: Read Circuit Set Year */
+  /* Felt: Indhold: Read Circuit Set Year */
   $handler->display->display_options['fields']['field_bibsdb_rcs_year']['id'] = 'field_bibsdb_rcs_year';
   $handler->display->display_options['fields']['field_bibsdb_rcs_year']['table'] = 'field_data_field_bibsdb_rcs_year';
   $handler->display->display_options['fields']['field_bibsdb_rcs_year']['field'] = 'field_bibsdb_rcs_year';
@@ -126,18 +132,18 @@ function bibsdb_read_circuit_sets_views_default_views() {
   $handler->display->display_options['fields']['field_bibsdb_rcs_year']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_bibsdb_rcs_year']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bibsdb_rcs_year']['element_default_classes'] = FALSE;
-  /* Sort criterion: Content: Read Circuit Set Author Last Name (field_bibsdb_rcs_author_lastname) */
+  /* Sorteringskriterie: Indhold: Read Circuit Set Author Last Name (field_bibsdb_rcs_author_lastname) */
   $handler->display->display_options['sorts']['field_bibsdb_rcs_author_lastname_value']['id'] = 'field_bibsdb_rcs_author_lastname_value';
   $handler->display->display_options['sorts']['field_bibsdb_rcs_author_lastname_value']['table'] = 'field_data_field_bibsdb_rcs_author_lastname';
   $handler->display->display_options['sorts']['field_bibsdb_rcs_author_lastname_value']['field'] = 'field_bibsdb_rcs_author_lastname_value';
-  /* Filter criterion: Content: Published */
+  /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filterkriterie: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -149,12 +155,12 @@ function bibsdb_read_circuit_sets_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Read Circuit Set Grid', 'panel_pane_1');
   $translatables['bibsdb_rcs_grid'] = array(
     t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
     t('[field_bibsdb_rcs_author_lastname], [field_bibsdb_rcs_author_firsname] '),
     t('[field_bibsdb_rcs_image][field_bibsdb_rcs_description]'),
     t('[field_bibsdb_rcs_publisher] [field_bibsdb_rcs_year]. [field_bibsdb_rcs_page_count] sider.'),
